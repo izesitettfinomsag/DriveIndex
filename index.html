@@ -1226,8 +1226,8 @@
                     encodeURI(sharePath())
                 );
                 const btn = document.querySelector(".btn.share");
-                btn.innerHTML = "已复制";
-                setTimeout(() => (btn.innerHTML = "分享"), 250);
+                btn.innerHTML = "Copied";
+                setTimeout(() => (btn.innerHTML = "Share"), 250);
               });
             switchRightDisplay("preview");
 
@@ -1605,13 +1605,14 @@
             <div class="info">
               <div class="file-name"></div>
               <div class="btn download">Download</div>
+              <div class="btn share">Share</div>
             </div>
             <div class="content"></div>
           </div>
           <div class="password-wrapper">
             <div class="password">
               <input type="password" />
-              <button>提交</button>
+              <button>Password is needed for this file</button>
             </div>
           </div>
         </div>

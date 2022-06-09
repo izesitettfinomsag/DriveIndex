@@ -1192,43 +1192,6 @@
                 content.appendChild(textWrapper);
                 break;
             }
-            document.querySelector(".file-name").innerHTML = path;
-            document
-              .querySelector(".btn.download")
-              .addEventListener("click", () => (location.href = url));
-            document
-              .querySelector(".btn.quote")
-              .addEventListener("click", (event) => {
-                previewHandler.copyTextContent(
-                  null,
-                  window.api.url + "?file=" + encodeURI(path)
-                );
-                const btn = document.querySelector(".btn.quote");
-                btn.innerHTML = "已复制";
-                setTimeout(() => (btn.innerHTML = "Quote"), 250);
-              });
-            document
-              .querySelector(".btn.share")
-              .addEventListener("click", (event) => {
-                const sharePath = () => {
-                  let arr = window.backFordwardCache.current.split("/");
-                  let r = "";
-                  for (let i = 1; i < arr.length; i++) {
-                    r += "/" + arr[i];
-                  }
-                  return r;
-                };
-                previewHandler.copyTextContent(
-                  null,
-                  window.location.origin +
-                    window.location.pathname +
-                    "?path=" +
-                    encodeURI(sharePath())
-                );
-                const btn = document.querySelector(".btn.share");
-                btn.innerHTML = "已复制";
-                setTimeout(() => (btn.innerHTML = "Share"), 250);
-              });
             switchRightDisplay("preview");
 
             if (contentType !== "video") return;

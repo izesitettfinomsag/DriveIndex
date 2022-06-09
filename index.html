@@ -1171,7 +1171,7 @@
                 div.style.webkitTapHighlightColor = "rgba(0, 0, 0, 0)";
                 div.style.cursor = "pointer";
                 div.style.textAlign = "center";
-                div.innerHTML = "新窗口打开";
+                div.innerHTML = "Open in a new window";
                 div.addEventListener("click", () => window.open(officeOnline));
                 content.innerHTML = "";
                 content.appendChild(div);
@@ -1187,7 +1187,7 @@
               default:
                 let textWrapper = document.createElement("div");
                 textWrapper.style.textAlign = "center";
-                textWrapper.innerHTML = "该文件不支持预览";
+                textWrapper.innerHTML = "This type of file is not supported for preview";
                 content.innerHTML = "";
                 content.appendChild(textWrapper);
                 break;
@@ -1205,7 +1205,7 @@
                 );
                 const btn = document.querySelector(".btn.quote");
                 btn.innerHTML = "已复制";
-                setTimeout(() => (btn.innerHTML = "引用"), 250);
+                setTimeout(() => (btn.innerHTML = "Quote"), 250);
               });
             document
               .querySelector(".btn.share")
@@ -1227,7 +1227,7 @@
                 );
                 const btn = document.querySelector(".btn.share");
                 btn.innerHTML = "已复制";
-                setTimeout(() => (btn.innerHTML = "分享"), 250);
+                setTimeout(() => (btn.innerHTML = "Share"), 250);
               });
             switchRightDisplay("preview");
 
@@ -1463,7 +1463,7 @@
             () => {
               window.fileCache.set(path, false);
               const loadingText = loading.querySelector(".loading");
-              loadingText.innerText = "Failed!";
+              loadingText.innerText = "This didn't work... Try refreshing the page!";
               setTimeout(() => {
                 loading.style.display = "none";
                 loadingText.innerText = "Loading..";

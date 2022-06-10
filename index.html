@@ -1210,24 +1210,13 @@
             document
               .querySelector(".btn.share")
               .addEventListener("click", (event) => {
-                const sharePath = () => {
-                  let arr = window.backFordwardCache.current.split("/");
-                  let r = "";
-                  for (let i = 1; i < arr.length; i++) {
-                    r += "/" + arr[i];
-                  }
-                  return r;
-                };
                 previewHandler.copyTextContent(
                   null,
-                  window.location.origin +
-                    window.location.pathname +
-                    "?path=" +
-                    encodeURI(sharePath())
+                  "vlc:" + window.api.url + encodeURI(path)
                 );
-                //const btn = document.querySelector(".btn.share");
-                //btn.innerHTML = "";
-                //setTimeout(() => (btn.innerHTML = ""), 250);
+                const btn = document.querySelector(".btn.share");
+                btn.innerHTML = "Opened!";
+                setTimeout(() => (btn.innerHTML = "Vlc"), 250);
               });
             switchRightDisplay("preview");
 
@@ -1606,7 +1595,7 @@
               <div class="file-name"></div>
               <div class="btn download">Download</div>
               <div class="btn quote">Share</div>
-              <div class="btn share">Options:</div>
+              <div class="btn share">Vlc</div>
             </div>
             <div class="content"></div>
           </div>

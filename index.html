@@ -1210,9 +1210,7 @@
             document
               .querySelector(".btn.share")
               .addEventListener("click", (event) => {
-                previewHandler.copyTextContent(
-                  null,
-                  "vlc:" + window.api.url + encodeURI(path)
+                window.open("vlc:" + window.api.url + encodeURI(path), '_blank'              
                 );
                 const btn = document.querySelector(".btn.share");
                 btn.innerHTML = "Opened!";

@@ -1210,8 +1210,7 @@
             document
               .querySelector(".btn.share")
               .addEventListener("click", (event) => {
-                window.open("vlc:" + window.api.url + encodeURI(path), '_blank'              
-                );
+                window.open(window.api.url + "?file=" + encodeURI(path), '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
                 const btn = document.querySelector(".btn.share");
                 btn.innerHTML = "Opened!";
                 setTimeout(() => (btn.innerHTML = "Vlc"), 250);

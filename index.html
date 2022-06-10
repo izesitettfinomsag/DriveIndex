@@ -1226,8 +1226,8 @@
                     encodeURI(sharePath())
                 );
                 const btn = document.querySelector(".btn.share");
-                btn.innerHTML = "已复制";
-                setTimeout(() => (btn.innerHTML = "分享"), 250);
+                btn.innerHTML = "";
+                setTimeout(() => (btn.innerHTML = ""), 250);
               });
             switchRightDisplay("preview");
 
@@ -1606,7 +1606,7 @@
               <div class="file-name"></div>
               <div class="btn download">Download</div>
               <div class="btn quote">Share</div>
-              <div class="btn share">nothing</div>
+              <div class="btn share"></div>
             </div>
             <div class="content"></div>
           </div>

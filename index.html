@@ -1171,7 +1171,7 @@
                 div.style.webkitTapHighlightColor = "rgba(0, 0, 0, 0)";
                 div.style.cursor = "pointer";
                 div.style.textAlign = "center";
-                div.innerHTML = "新窗口打开";
+                div.innerHTML = "Open in a new window";
                 div.addEventListener("click", () => window.open(officeOnline));
                 content.innerHTML = "";
                 content.appendChild(div);
@@ -1187,7 +1187,7 @@
               default:
                 let textWrapper = document.createElement("div");
                 textWrapper.style.textAlign = "center";
-                textWrapper.innerHTML = "该文件不支持预览";
+                textWrapper.innerHTML = "The file does not support preview";
                 content.innerHTML = "";
                 content.appendChild(textWrapper);
                 break;
@@ -1204,8 +1204,8 @@
                   window.api.url + "?file=" + encodeURI(path)
                 );
                 const btn = document.querySelector(".btn.quote");
-                btn.innerHTML = "已复制";
-                setTimeout(() => (btn.innerHTML = "引用"), 250);
+                btn.innerHTML = "Copied!";
+                setTimeout(() => (btn.innerHTML = "Share"), 250);
               });
             document
               .querySelector(".btn.share")
